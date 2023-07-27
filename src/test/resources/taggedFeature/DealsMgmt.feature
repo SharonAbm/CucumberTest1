@@ -2,12 +2,13 @@
 Feature: Deals Management
 CRUD Operations for Deals
 
-#@SmokeTest @RegressionTest
+
+@SmokeTest 
 Scenario: Create a Deals
 Given User is logged in
 When User create a deals
 
-#@SmokeTest
+@SmokeTest @RegressionTest
 Scenario: Update a Deals
 Given User is logged in
 When User update a deals

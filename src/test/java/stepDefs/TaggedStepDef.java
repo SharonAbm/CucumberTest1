@@ -9,16 +9,23 @@ import io.cucumber.java.en.When;
 
 public class TaggedStepDef {
 	
-	@Before("@SmokeTest")
+	@Before(value="@SmokeTest",order=2)
 	public void initEdge() {
 		System.out.println("Edge Before Each Scenario...");
 	}
 	
-	@Before("@RegressionTest")
+	@Before(value="RegressionTest",order=2)
 	public void initChrome() {
 		System.out.println("Chrome Before Each Scenario...");
 	}
-	
+	@Before(value="RegressionTest",order=2)
+	public void readPropertyReg() {
+		System.out.println("Read from property file...Reg Test");
+	}
+	@Before(value="@SmokeTest",order=1)
+	public void readPropertySmoke() {
+		System.out.println("Read from property file...Smoke Test");
+	}
 	
 	@BeforeAll
 	public static void setup() {

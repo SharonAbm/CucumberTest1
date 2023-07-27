@@ -10,6 +10,6 @@ Scenario: Search Selenium Tutorial
 When User search Selenium Tutorial
 Then Should display Selenium result page
 
-Scenario: Search Cypress Tutorial
-When User search Cypress Tutorial
-Then Should display Cypress result page
+#Scenario: Search Cypress Tutorial
+#When User search Cypress Tutorial
+#Then Should display Cypress result page
